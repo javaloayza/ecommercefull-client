@@ -102,28 +102,28 @@ const DrawerRight = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Bienvenido</DrawerHeader>
+          <DrawerHeader fontSize='22px'>Bienvenido</DrawerHeader>
 
           <DrawerBody>
 
-            <UnorderedList display={['flex', 'flex', 'flex']} alignItems='flex-start' gap='1rem'>
+            <UnorderedList display={['flex', 'flex', 'flex']} alignItems='flex-start' gap='1rem' ml='0'>
               {token
                 ? <>
                   <div className={s.navLink} onClick={() => handleClick(3)}>{/* <MdOutlineFavoriteBorder /> */}</div>
                   <Menu>
                     <Flex bg='#fff' alignItems='flex-start' direction='column'>
-                      <Avatar size='sm' mr={2} name={user.email && user.email.split('@')[0]} src='' />
-                      <Button _hover={{ bg: '#fff' }} _active={{ bg: '#fff' }} _focus={{ boxShadow: 'none' }} p={0} fontSize='1rem' fontWeight={700} bg='#fff' as={Button}>{user.firstname ? 'Hola, ' + user.firstname : user.email ? 'Hola, ' + user.email.split('@')[0] : 'Hola, User'}
+                      <Avatar size='md' mr={2} name={user.email && user.email.split('@')[0]} src='' />
+                      <Button _hover={{ bg: '#fff' }} _active={{ bg: '#fff' }} _focus={{ boxShadow: 'none' }} p={0} fontSize='18px' fontWeight={700} bg='#fff' as={Button} mb='1rem'>{user.firstname ? 'Hola, ' + user.firstname : user.email ? 'Hola, ' + user.email.split('@')[0] : 'Hola, User'}
                       </Button>
-                      <Link to='/perfil/' onClick={() => handleClick(0)}><Text _active={{ bg: '#fff' }} _focus={{ boxShadow: 'none' }} fontSize='1rem' name='perfil' justify='flex-start'>Mi cuenta</Text></Link>
-                      <Link to='/perfil/' onClick={() => handleClick(2)}><Text _active={{ bg: '#fff' }} _focus={{ boxShadow: 'none' }} fontSize='1rem' bg='#fff' name='mis-compras'>Mis compras</Text></Link>
-                      <Link to='/perfil/' fontSize='1rem' onClick={() => handleClick(3)}><Text _active={{ bg: '#fff' }} _focus={{ boxShadow: 'none' }} fontSize='1rem' bg='#fff' name='lista-de-deseos'>Favoritos</Text></Link>
-                      <Link _focus={{ boxShadow: 'none' }} _active={{ bg: '#fff' }} fontSize='1rem' bg='#fff' onClick={handleSubmit} name='salir'><Text _active={{ bg: '#fff' }} _focus={{ boxShadow: 'none' }} fontSize='1rem' bg='#fff'>Salir</Text></Link>
+                      <Link to='/perfil/' onClick={() => handleClick(0)}><Text _active={{ bg: '#fff' }} _focus={{ boxShadow: 'none' }} fontSize='18px' name='perfil' justify='flex-start' pb='1rem'>Mi cuenta</Text></Link>
+                      <Link to='/perfil/' onClick={() => handleClick(2)}><Text _active={{ bg: '#fff' }} _focus={{ boxShadow: 'none' }} fontSize='18px' bg='#fff' name='mis-compras' pb='1rem'>Mis compras</Text></Link>
+                      <Link to='/perfil/' fontSize='18px' onClick={() => handleClick(3)}><Text _active={{ bg: '#fff' }} _focus={{ boxShadow: 'none' }} fontSize='18px' bg='#fff' name='lista-de-deseos' pb='1rem'>Favoritos</Text></Link>
+                      <Link _focus={{ boxShadow: 'none' }} _active={{ bg: '#fff' }} fontSize='1rem' bg='#fff' onClick={handleSubmit} name='salir'><Text _active={{ bg: '#fff' }} _focus={{ boxShadow: 'none' }} fontSize='18px' bg='#fff' pb='1rem'>Salir</Text></Link>
                     </Flex>
                   </Menu>
                 </>//eslint-disable-line
                 : <ListItem listStyleType='none' fontSize='1.25rem' mr='2.5rem'><Link to='#' onClick={handleSubmit} name='ingresar'>Ingresar</Link></ListItem>}
-              <Link to='/cart' onClick={onClose} className={s.cartDrawer}>{cartCounter > 0 ? <span>{cartCounter}</span> : undefined}<BsCart fontSize='1.5rem' color='black' /> </Link>
+              <Link to='/cart' onClick={onClose} className={s.cartDrawer}>{cartCounter > 0 ? <span>{cartCounter}</span> : undefined}<BsCart fontSize='30px' color='black' /> </Link>
             </UnorderedList>
             {/* <Input placeholder='Type here...' /> */}
           </DrawerBody>

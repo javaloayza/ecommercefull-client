@@ -40,17 +40,18 @@ export default function SearchBar () {
             value={item}
             bg='white'
             color='#000'
-            pl='1rem'
-            pr={['2rem', '1.5rem', '1.5rem']}
-            ml={['2rem', '2rem', '-4rem']}
-            mr={['0', '2rem', '8rem']}
+/*             pl='1rem'
+            pr={['2rem', '1.5rem', '1.5rem']} */
+            ml={['2rem', '0', '0']}
+            /* mr={['0', '2rem', '8rem']} */
             height='2.3rem'
+            width={['215px', '320px', '380px']}
             _focus={{ outline: 'none' }}
           />
           <Icon
             as={BiSearchAlt}
             position='absolute'
-            right={['-1.5rem', '-1.5rem', '4rem']}
+            right={['0.5rem', '0.5rem', '0.5rem']}
             top='50%'
             transform='translateY(-50%)'
             w='1.5rem'

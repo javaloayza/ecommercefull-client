@@ -125,7 +125,7 @@ const NavBar = () => {
 
   return (
     <Box>
-      <Box position='relative' height='5rem' bg='#333333' display='flex' justifyContent='space-between' color='white' alignItems='center' pl={['2rem', '2rem', '3rem']} pr={['2rem', '2rem', '5rem']}>
+      <Box position='relative' height='5rem' bg='#333333' display='flex' justifyContent='space-between' color='white' alignItems='center' pl={['1rem', '2rem', '3rem']} pr={['1rem', '2rem', '5rem']}>
         <Link to='/' onClick={() => dispatch(clearProductFilter())} className={s.logo}>
           <Icon width='1.7rem' height='1.7rem' name='logo' as={BsShopWindow} />
           <Flex display={['none', 'none', 'flex']}><span>Line</span> </Flex>
@@ -138,7 +138,9 @@ const NavBar = () => {
             </Box>}
         </>
 
-        <Box />
+        <Box top='-2'>
+          {pathname === '/' && <SearchBar />}
+        </Box>
         <Box>
           <UnorderedList display={['none', 'none', 'none', 'flex']} alignItems='center' gap='1rem'>
             {token
@@ -173,9 +175,6 @@ const NavBar = () => {
           <Heading color='black' textAlign='center'>{isRegistrando ? 'Registrate' : 'Inicia Sesion'}</Heading>
           <Text color='black' mt={2} textAlign='center'>Ingresa a tu cuenta para ver tus compras, favoritos, etc.</Text>
         </ModalLogin>
-      </Box>
-      <Box position='absolute' top='-2' left={['19%', '27%', '42%']}>
-        {pathname === '/' && <SearchBar />}
       </Box>
     </Box>
   )

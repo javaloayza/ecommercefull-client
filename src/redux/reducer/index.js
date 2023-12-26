@@ -31,6 +31,13 @@ const appReducer = combineReducers({
   buyNow
 })
 
+/**
+ * If the action type is LOG_OUT, then return the appReducer with the state of the brands, categories,
+ * and products. Otherwise, return the state of the appReducer
+ * @param state - The current state of the app.
+ * @param action - The action object that was dispatched.
+ * @returns The state of the appReducer.
+ */
 const rootReducer = (state, action) => {
   if (action.type === 'LOG_OUT') {
     return appReducer({
