@@ -129,7 +129,7 @@ const NavBar = () => {
         <Link to='/' onClick={() => dispatch(clearProductFilter())} className={s.logo}>
           <Icon width='1.7rem' height='1.7rem' name='logo' as={BsShopWindow} />
           <Flex display={['none', 'none', 'flex']}><span>Line</span> </Flex>
-          <DrawerCategory>  <BiCategoryAlt fontSize='1.7rem' color='black' /> </DrawerCategory>
+          <DrawerCategory>  <BiCategoryAlt /> </DrawerCategory>
         </Link>
         <>
           {user.isAdmin &&

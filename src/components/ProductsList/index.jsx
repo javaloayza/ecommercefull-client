@@ -27,11 +27,11 @@ function ProductList () {
     <Box display='flex' flexDirection='column' width='70%'>
       <Box justifyContent='center' alignItems='center' display='flex' gap='1rem' mb='1rem' mr={['-2rem', '0rem', '3rem']}>
         <Box display='flex' gap='1rem' justifyContent='center' alignItems='center'>Ordenar por <SortingSelector /></Box>
-        <Box cursor='pointer' bg='#333333' height='2.45rem' pl='0.5rem' pr='0.5rem' pt='0.5rem' pb='0.8rem' color='white' fontSize={['18px', '18px', '22px', '22px']} borderRadius='50%' onClick={() => dispatch(clearProductFilter())} name='Clean'>
-          <Tooltip label='Limpiar filtro' fontSize='sm' placement='top' colorScheme='#333333'>
+        <Tooltip label='Limpiar filtro' fontSize='sm' placement='top' mt='8px' bg='#333333'>
+          <Box cursor='pointer' bg='#333333' height='2.45rem' pl='0.5rem' pr='0.5rem' pt='0.5rem' pb='0.8rem' color='white' fontSize={['18px', '18px', '22px', '22px']} borderRadius='50%' onClick={() => dispatch(clearProductFilter())} name='Clean'>
             <span><MdCleaningServices /></span>
-          </Tooltip>
-        </Box>
+          </Box>
+        </Tooltip>
       </Box>
       <Box display='flex' flexWrap='wrap' alignSelf='flex-end'>
         {Array.isArray(products) && products.map(product => (
