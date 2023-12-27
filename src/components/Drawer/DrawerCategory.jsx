@@ -11,7 +11,7 @@ export const DrawerCategory = () => {
 
   return (
     <>
-      <Button display={['flex', 'flex', 'none', 'none']} ref={btnRef} pr='1rem' pl='1px' size='1.8em' colorScheme='black' onClick={onOpen} zIndex='2'>
+      <Button display={['flex', 'flex', 'none', 'none']} ref={btnRef} pl='1px' size='1.8em' colorScheme='black' onClick={onOpen} zIndex='2'>
         <BiCategoryAlt fontSize='1.8rem' color='white' />
       </Button>
       <Drawer
