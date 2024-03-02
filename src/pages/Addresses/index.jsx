@@ -54,7 +54,7 @@ const AddressSelector = () => {
   return (
 
     <Flex flexDirection='column' justifyContent={['flex-start', 'flex-start', 'flex-start', 'center']} alignItems='center' minH='74vh'>
-      <Breadcrumb mt='1rem' p='0rem 0rem 0rem 2rem' w={['null', 'null', 'null', '61.3rem']} spacing='8px' separator='<' mr={['18rem', '18rem', '18rem', '2rem']}>
+      <Breadcrumb mt='1rem' p='0rem 0rem 0rem 5rem' w={['null', 'null', 'null', '61.3rem']} spacing='8px' separator='<' mr={['18rem', '18rem', '18rem', '2rem']}>
         <BreadcrumbItem>
           <BreadcrumbLink textDecoration='underline'><Link to='/cart'>Carrito</Link></BreadcrumbLink>
         </BreadcrumbItem>
@@ -65,7 +65,7 @@ const AddressSelector = () => {
       <Flex mb='2rem' ml={['null', 'null', 'null', '5.3rem']} mr={['null', 'null', 'null', '5.3rem']} w={['null', 'null', 'null', '61.3rem']} mt='1rem' justifyContent='space-between' flexDirection={['column', 'column', 'column', 'row']}>
 
         {/* column 1 */}
-        <Flex p='2rem 2rem 1rem 2rem' flexDirection='column' w='30rem'>
+        <Flex p={['2rem 4rem 1rem 4rem', '2rem 2rem 1rem 2rem']} flexDirection='column' w='30rem'>
           {/* <Text mb='2.3rem' fontWeight={500} fontSize='larger'>¿Cómo quieres recibir tu compra?</Text>
           <RadioGroup onChange={setRadioValue} value={radioValue}>
             <Stack direction='column'>

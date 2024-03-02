@@ -7,15 +7,35 @@ import { onAuthStateChanged } from 'firebase/auth'
 import { logIn } from '../../redux/actions/users.actions'
 import { useDispatch } from 'react-redux'
 import { Box } from '@chakra-ui/react'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { removeBuyNowItem } from '../../redux/actions/buyNow.actions'
 import Carousel from '../../components/Carousel'
+import LoadingSpinner from '../../components/LoadingSpinner/index.jsx'
+import styles from './index.module.css'
 
 function UsersHome () {
+  const [isLoading, setIsLoading] = useState(true)
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     // Simulate API call delay
+  //     await new Promise((resolve) => setTimeout(resolve, 50000))
+  //     setIsLoading(false)
+  //   }
+  //   fetchData()
+  // }, [])
+
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(removeBuyNowItem())
-  })
+
+    const fetchData = async () => {
+      // Simulate API call delay
+      await new Promise((resolve) => setTimeout(resolve, 2000))
+      setIsLoading(false)
+    }
+    fetchData()
+  }, [dispatch])
 
   onAuthStateChanged(auth, async (user) => {
     if (user) {
@@ -38,10 +58,17 @@ function UsersHome () {
   return (
     <>
       <Box> <Carousel /> </Box>
-      <Box pl={['1rem', '1rem', '7rem']} pr={['0rem', '0rem', '7rem']} pt={['2rem', '2rem', '4rem']} pb={['2rem', '2rem', '4rem']} display='flex' flexDirection='column' justifyContent='center' alignSelf='center'>
+      <Box pl={['1rem', '1rem', '4.5rem']} pr={['0rem', '0rem', '4.5rem']} pt={['2rem', '2rem', '4rem']} pb={['2rem', '2rem', '4rem']} display='flex' flexDirection='column' justifyContent='center' alignSelf='center'>
         <Box display='flex' justifyContent='center' minH='65vh'>
           <Box display={['none', 'none', 'flex']}> <FilterContainer /> </Box>
-          <ProductList />
+          {isLoading
+            ? (
+              <div className={styles.loadingHome}>
+                <LoadingSpinner />
+              </div>)
+            : (
+              <ProductList />
+              )}
         </Box>
       </Box>
     </>

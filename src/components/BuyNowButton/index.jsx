@@ -19,9 +19,9 @@ const BuyNowButton = ({ product, setState, state }) => {
   }
 
   return (
-    <Flex>
-      <Flex alignItems='center'>
-        <Box onClick={handleClick} width='10rem' height='2.5rem' display='flex' justifyContent='center' alignItems='center' cursor='pointer' p='0.5rem' bg='#0082E3' color='white'>Comprar ahora</Box>
+    <Flex flexGrow='1'>
+      <Flex alignItems='center' flexGrow='1'>
+        <Box onClick={handleClick} flexGrow='1' width='10rem' height='2.5rem' display='flex' justifyContent='center' alignItems='center' cursor='pointer' p='0.5rem' bg='#0082E3' color='white'>Comprar ahora</Box>
       </Flex>
     </Flex>
 

@@ -24,7 +24,7 @@ function ProductList () {
   if (products.message !== undefined) return <div>{products.message}</div>
 
   return (
-    <Box display='flex' flexDirection='column' width='70%'>
+    <Box display='flex' flexDirection='column' width='80%'>
       <Box justifyContent='center' alignItems='center' display='flex' gap='1rem' mb='1rem' mr={['-2rem', '0rem', '3rem']}>
         <Box display='flex' gap='1rem' justifyContent='center' alignItems='center'>Ordenar por <SortingSelector /></Box>
         <Tooltip label='Limpiar filtro' fontSize='sm' placement='top' mt='8px' bg='#333333'>

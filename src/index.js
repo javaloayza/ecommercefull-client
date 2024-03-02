@@ -9,8 +9,8 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { extendTheme, ChakraProvider } from '@chakra-ui/react'
 
 // Setup default base url for axios requests
-// axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001'
-axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL || 'https://ecommercefull-api.onrender.com'
+axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001'
+// axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL || 'https://ecommercefull-api.onrender.com'
 
 const colors = {
   primary: '#2C2C2E',

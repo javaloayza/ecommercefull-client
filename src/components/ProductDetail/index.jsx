@@ -64,7 +64,7 @@ function ProductDetail () {
               <Text alignSelf='flex-start'>{product.model}</Text>
               {product.canReview && !didReview ? <Box onClick={handleClick} ml='0.1rem' alignSelf='flex-start' width='10rem' height='2.5rem' justifyContent='center' alignItems='center' cursor='pointer' p='0.5rem' bg='#0082E3' color='white'>Agregar reseña</Box> : null}
 
-              <Flex mt='10px' justifyContent='flex-start'>
+              <Flex mt='10px' width='100%' justifyContent='flex-start'>
                 <BuyNowButton state={modalLogin} setState={setModalLogin} product={product} />
                 <CartButton product={product} />
               </Flex>

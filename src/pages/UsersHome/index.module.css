@@ -13,3 +13,11 @@
     padding: 0 1rem;
   }
 }
+
+.loadingHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+  width: 100%;
+}
