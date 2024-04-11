@@ -54,6 +54,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@redux-devtools/extension": "^3.2.2",
     "standard": "^17.0.0"
   }
