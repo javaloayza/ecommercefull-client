@@ -1,4 +1,3 @@
-
 import { useSelector, useDispatch } from 'react-redux'
 import { Select } from '@chakra-ui/react'
 import { addProductFilter } from '../../redux/actions/products.actions'

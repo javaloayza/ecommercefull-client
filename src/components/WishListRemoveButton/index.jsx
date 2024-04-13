@@ -1,4 +1,3 @@
-
 import { useDispatch } from 'react-redux'
 import { removeFromWishlist } from '../../redux/actions/wishlist.actions'
 import { Text} from '@chakra-ui/react' //eslint-disable-line
