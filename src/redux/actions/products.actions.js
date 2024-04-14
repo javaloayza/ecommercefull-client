@@ -1,5 +1,5 @@
 import { postProduct, getProducts, getProduct, putProduct, deleteProduct } from '../../services/products'
-import { GET_PRODUCTS, GET_PRODUCT_DETAILS, ADD_PRODUCTS_FILTER, SET_TOAST, CLEAR_PRODUCTS_FILTER, SET_PRODUCTS_SORTING } from '../constants'
+import { GET_PRODUCTS, GET_PRODUCT_DETAILS, ADD_PRODUCTS_FILTER, SET_TOAST, CLEAR_PRODUCTS_FILTER, SET_PRODUCTS_SORTING, FETCH_PRODUCTS_REQUEST } from '../constants'
 
 export const createNewProduct = (newProduct) => {
   return async (dispatch) => {
@@ -38,6 +38,7 @@ export const createNewProduct = (newProduct) => {
 
 export const getProductsList = (searchOptions) => {
   return async (dispatch) => {
+    dispatch({ type: FETCH_PRODUCTS_REQUEST })
     try {
       const { data } = await getProducts(searchOptions)
 
